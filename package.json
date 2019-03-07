@@ -1,0 +1,36 @@
+{
+  "name": "js-builder",
+  "version": "0.1.0",
+  "description": "A tool that minifies & unifies js files",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "cd tests;node ../dist/index.js",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThePerkinrex/js-builder.git"
+  },
+  "keywords": [
+    "js",
+    "minifier",
+    "builder"
+  ],
+  "author": "ThePerkinrex <theperkinrex@gmail.com> (https://github.com/ThePerkinrex)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThePerkinrex/js-builder/issues"
+  },
+  "homepage": "https://github.com/ThePerkinrex/js-builder#readme",
+  "devDependencies": {
+    "source-map-support": "^0.5.10",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@types/shelljs": "^0.8.3",
+    "shelljs": "^0.8.3"
+  },
+  "bin": "dist/cli.js"
+}
