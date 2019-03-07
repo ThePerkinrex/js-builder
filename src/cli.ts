@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import * as main from './index';
+import * as minifier from './minifier';
 import * as conf from './config/module';
-import fs, { write } from 'fs';
+import fs from 'fs';
 import shelljs from 'shelljs';
 
 
@@ -27,5 +27,7 @@ if(args.length > 0){
         }else{
             conf.writeConfig(config_path);
         }
+    }else{
+        console.log(minifier.minifyFile(shelljs.pwd()+'/'+args[0]));
     }
 }

@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/ThePerkinrex/js-builder#readme",
   "devDependencies": {
-    "source-map-support": "^0.5.10",
+    "@types/shelljs": "^0.8.3",
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "@types/shelljs": "^0.8.3",
+    "source-map-support": "^0.5.10",
     "shelljs": "^0.8.3"
   },
   "bin": "dist/cli.js"
