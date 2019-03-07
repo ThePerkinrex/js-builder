@@ -8,10 +8,11 @@ export const default_config: IConfig = {
     },
     libraries: {
         utils: {
-            files: ['utils.js'],
-            usedBy: ['index']
+            files: ['utils.js']
         }
-    }
+    },
+    outDir: 'dist',
+    nameStyle: '[name].min.js'
 }
 
 export const empty_main_config: IConfig = {
@@ -19,8 +20,7 @@ export const empty_main_config: IConfig = {
 }
 
 export const empty_library_config: IConfigLibrary = {
-    files: [],
-    usedBy: []
+    files: []
 }
 
 export const config_filename = 'jsbconfig.json';

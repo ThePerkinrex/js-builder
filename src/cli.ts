@@ -28,6 +28,7 @@ if(args.length > 0){
             conf.writeConfig(config_path);
         }
     }else{
+        console.log(`The file ${args[0]} has a size of ${fs.statSync(shelljs.pwd()+'/'+args[0]).size} B`)
         console.log(minifier.minifyFile(shelljs.pwd()+'/'+args[0]));
     }
 }

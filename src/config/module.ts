@@ -13,7 +13,7 @@ export function isValidConfig(config: any): config is IConfig {
         let libraries: any = config.libraries;
         for (let libname in libraries) {
             let lib = libraries[libname]
-            if (lib.files === undefined || lib.usedBy === undefined) {
+            if (lib.files === undefined) {
                 return false;
             }
         }
@@ -38,7 +38,6 @@ export function fixConfig(config: any): IConfig {
         for (let libname in libraries) {
             let lib = libraries[libname]
             lib.files = lib.files || empty_library_config.files;
-            lib.usedBy = lib.usedBy || empty_library_config.usedBy;
             return_config.libraries[libname] = lib;
         }
     }

@@ -16,9 +16,10 @@ export interface IConfig {
     libraries?: {
         [libraryName: string]: IConfigLibrary
     },
+    outDir?: string,
+    nameStyle?: string
 }
 
 export interface IConfigLibrary {
     files: Array<string>,
-    usedBy: Array<string>,
 }
